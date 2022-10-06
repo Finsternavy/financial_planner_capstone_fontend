@@ -1,5 +1,7 @@
 import axios from "axios"
 
+const apiURL = 'https://financial-planner-backend.onrender.com/'
+
 class DataService{
 
     async postUser(user){
@@ -14,7 +16,7 @@ class DataService{
         console.log("Attempting to get user")
         let newdata = {}
 
-        let response = await axios.post("http://127.0.0.1:5000/user/" + cradentials['user_name'], cradentials).then(res =>{
+        let response = await axios.post(apiURL + "user/" + cradentials['user_name'], cradentials).then(res =>{
             console.log(res.data)
             newdata = res.data
         })
@@ -25,7 +27,7 @@ class DataService{
     async recoverUsername(email){
         console.log("Attempting to send recovery email..")
         let data
-        await axios.post("http://127.0.0.1:5000/api/recover-username", email).then(res =>{
+        await axios.post(apiURL + "api/recover-username", email).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -35,7 +37,7 @@ class DataService{
     async recoverPassword(user){
         console.log("Attempting to recover password..")
         let data
-        await axios.post('http://127.0.0.1:5000/api/recover-password', user).then(res =>{
+        await axios.post(apiURL + 'api/recover-password', user).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -45,7 +47,7 @@ class DataService{
     async resetPassword(passwordData){
         console.log("Attempting to reset password...")
         let data
-        await axios.post('http://127.0.0.1:5000/api/reset-password', passwordData).then(res =>{
+        await axios.post(apiURL + 'api/reset-password', passwordData).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -56,7 +58,7 @@ class DataService{
     // will need to change this in the backend to get only budgtes belonging to the logged in user
     async getBudgets(user_name){
         let data
-        await axios.get('http://127.0.0.1:5000/api/budgets/' + user_name).then(res =>{
+        await axios.get(apiURL + 'api/budgets/' + user_name).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -67,7 +69,7 @@ class DataService{
     async deleteActiveBudget(user_name, budget){
         let data
         console.log(budget)
-        await axios.post('http://127.0.0.1:5000/api/budget/delete/' + user_name, budget).then(res =>{
+        await axios.post(apiURL + 'api/budget/delete/' + user_name, budget).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -78,7 +80,7 @@ class DataService{
     async postBudget(budget){
         console.log("Attempting to post budget...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/budgets", budget).then(res =>{
+        await axios.post(apiURL + "api/budgets", budget).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -89,7 +91,7 @@ class DataService{
     async snowball(debtsArray){
         console.log("Attempting to calculate endpoints for debt snowball...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/debt-snowball", debtsArray).then(res =>{
+        await axios.post(apiURL + "api/debt-snowball", debtsArray).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -100,7 +102,7 @@ class DataService{
     async calculateExpenseData(payload){
         console.log("Attempting to calculate expense data...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/calculate-expense", payload).then(res =>{
+        await axios.post(apiURL + "api/calculate-expense", payload).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -111,7 +113,7 @@ class DataService{
     async updateExpenseData(payload){
         console.log("Attempting to calculate expense data...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/update-expense", payload).then(res =>{
+        await axios.post(apiURL + "api/update-expense", payload).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -122,7 +124,7 @@ class DataService{
     async optimize(payload){
         console.log("Attempting to optimize budget...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/optimize-budget", payload).then(res =>{
+        await axios.post(apiURL + "api/optimize-budget", payload).then(res =>{
             console.log(res.data)
             data = res.data
         })
