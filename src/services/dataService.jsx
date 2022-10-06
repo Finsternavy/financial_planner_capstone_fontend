@@ -1,12 +1,12 @@
 import axios from "axios"
-let rootURL = "https://app.netlify.com/sites/shimmering-cat-5e70c4/deploys/633e514d87f9d94bd5f2ac4b/"
+let rootURL = "https://financial-planner-backend.onrender.com/"
 
 class DataService{
 
     async postUser(user){
         console.log("Attempting to post user")
 
-        await axios.post("http://127.0.0.1:5000/register", user).then(res =>{
+        await axios.post(rootURL, user).then(res =>{
             console.log(res.data)
         })
     }
@@ -26,7 +26,7 @@ class DataService{
     async recoverUsername(email){
         console.log("Attempting to send recovery email..")
         let data
-        await axios.post("http://127.0.0.1:5000/api/recover-username", email).then(res =>{
+        await axios.post(rootURL, email).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -36,7 +36,7 @@ class DataService{
     async recoverPassword(user){
         console.log("Attempting to recover password..")
         let data
-        await axios.post('http://127.0.0.1:5000/api/recover-password', user).then(res =>{
+        await axios.post(rootURL, user).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -46,7 +46,7 @@ class DataService{
     async resetPassword(passwordData){
         console.log("Attempting to reset password...")
         let data
-        await axios.post('http://127.0.0.1:5000/api/reset-password', passwordData).then(res =>{
+        await axios.post(rootURL, passwordData).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -57,7 +57,7 @@ class DataService{
     // will need to change this in the backend to get only budgtes belonging to the logged in user
     async getBudgets(user_name){
         let data
-        await axios.get('http://127.0.0.1:5000/api/budgets/' + user_name).then(res =>{
+        await axios.get(rootURL + user_name).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -68,7 +68,7 @@ class DataService{
     async deleteActiveBudget(user_name, budget){
         let data
         console.log(budget)
-        await axios.post('http://127.0.0.1:5000/api/budget/delete/' + user_name, budget).then(res =>{
+        await axios.post(rootURL + user_name, budget).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -79,7 +79,7 @@ class DataService{
     async postBudget(budget){
         console.log("Attempting to post budget...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/budgets", budget).then(res =>{
+        await axios.post(rootURL, budget).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -90,7 +90,7 @@ class DataService{
     async snowball(debtsArray){
         console.log("Attempting to calculate endpoints for debt snowball...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/debt-snowball", debtsArray).then(res =>{
+        await axios.post(rootURL, debtsArray).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -101,7 +101,7 @@ class DataService{
     async calculateExpenseData(payload){
         console.log("Attempting to calculate expense data...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/calculate-expense", payload).then(res =>{
+        await axios.post(rootURL, payload).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -112,7 +112,7 @@ class DataService{
     async updateExpenseData(payload){
         console.log("Attempting to calculate expense data...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/update-expense", payload).then(res =>{
+        await axios.post(rootURL, payload).then(res =>{
             console.log(res.data)
             data = res.data
         })
@@ -123,7 +123,7 @@ class DataService{
     async optimize(payload){
         console.log("Attempting to optimize budget...")
         let data
-        await axios.post("http://127.0.0.1:5000/api/optimize-budget", payload).then(res =>{
+        await axios.post(rootURL, payload).then(res =>{
             console.log(res.data)
             data = res.data
         })
