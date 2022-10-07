@@ -45,9 +45,10 @@
   text-align: center;
   margin-bottom: 20px;
   height: 40px;
-  border-radius: 10px;
   border: none;
   background-color: var(--nav-light);
+  color: var(--text-dark);
+  border-radius: 0;
 }
 
 .input::placeholder {

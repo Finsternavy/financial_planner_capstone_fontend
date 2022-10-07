@@ -92,6 +92,15 @@ const DebtSnowball = () => {
 
     return (
         <div className="debt-snowball container">
+            {!userDebts &&
+            <div className="container">
+                <h1 className="header">This tool is only functional if you have a budget with financed expenses.</h1>
+                {/* <div className="btn-container">
+                    <button className="btn" onClick={budgetHome}>Budget Home</button>
+                </div> */}
+
+            </div>
+            }
             <div className="input-container">
                 <label className="snowball-amount-label label">Additional Payment</label>
                 <input name="snowball" className="snowball" type="number" step={'0.01'} placeholder="Amount" onChange={onChange}/>
