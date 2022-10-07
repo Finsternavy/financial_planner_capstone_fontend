@@ -1,7 +1,7 @@
 import axios from "axios"
 
-const apiURL = 'https://financial-planner-backend.onrender.com/'
-// const apiURL = 'http://127.0.0.1:5000/'
+// const apiURL = 'https://financial-planner-backend.onrender.com/'
+const apiURL = 'http://127.0.0.1:5000/'
 
 class DataService{
 

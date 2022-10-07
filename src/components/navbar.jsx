@@ -45,7 +45,7 @@ const Navbar = () => {
             let path = '/'
             navigate(path)
 
-        }else if (e.target.matches('.home')){
+        }else if (e.target.matches('.home-link')){
 
             toggle_menu(e, currentDropDown)
             if (activeUser){
@@ -56,37 +56,37 @@ const Navbar = () => {
                 navigate(path)
             }
 
-        }else if(e.target.matches('.budget-home')){
+        }else if(e.target.matches('.budget-home-link')){
             toggle_menu(e, currentDropDown)
             let path = "/budget/home"
             navigate(path)
             
-        }else if(e.target.matches('.financial-goals')){
+        }else if(e.target.matches('.financial-goals-link')){
 
             toggle_menu(e, currentDropDown)
             let path = "/financial-goals"
             navigate(path)
 
 
-        }else if(e.target.matches('.debt-snowball')){
+        }else if(e.target.matches('.debt-snowball-link')){
 
             toggle_menu(e, currentDropDown)
             let path = "/debt-snowball"
             navigate(path)
 
-        }else if(e.target.matches('.budget-optimizer')){
+        }else if(e.target.matches('.budget-optimizer-link')){
             toggle_menu(e, currentDropDown)
             let path = "/budget-optimizer"
             navigate(path)
             // add logic
 
-        }else if(e.target.matches('.mortgage-calc')){
+        }else if(e.target.matches('.mortgage-calc-link')){
             toggle_menu(e, currentDropDown)
             let path = "/mortgage-calculator"
             navigate(path)
             // add logic
 
-        }else if(e.target.matches('.auto-calc')){
+        }else if(e.target.matches('.auto-calc-link')){
             toggle_menu(e, currentDropDown)
             let path = "/auto-calculator"
             navigate(path)
@@ -135,13 +135,13 @@ const Navbar = () => {
                         <>
                             <div onClick={menu_Click} className="dont-disable log-out">Logout</div>
                             <hr className="horizontal-line" />
-                            <div onClick={menu_Click} className="dont-disable home">Home</div>
-                            <div onClick={menu_Click} className="dont-disable budget-home">Budget Home</div>
-                            <div onClick={menu_Click} className="dont-disable financial-goals">Financial Goals</div>
-                            <div onClick={menu_Click} className="dont-disable budget-optimizer">Budget Optimizer</div>
-                            <div onClick={menu_Click} className="dont-disable debt-snowball">Debt Snowball</div>
-                            <div onClick={menu_Click} className="dont-disable mortgage-calc">Mortgage Calculator</div>
-                            <div onClick={menu_Click} className="dont-disable auto-calc">Auto Finance Calculator</div>
+                            <div onClick={menu_Click} className="dont-disable home-link">Home</div>
+                            <div onClick={menu_Click} className="dont-disable budget-home-link">Budget Home</div>
+                            <div onClick={menu_Click} className="dont-disable financial-goals-link">Financial Goals</div>
+                            <div onClick={menu_Click} className="dont-disable budget-optimizer-link">Budget Optimizer</div>
+                            <div onClick={menu_Click} className="dont-disable debt-snowball-link">Debt Snowball</div>
+                            <div onClick={menu_Click} className="dont-disable mortgage-calc-link">Mortgage Calculator</div>
+                            <div onClick={menu_Click} className="dont-disable auto-calc-link">Auto Finance Calculator</div>
                             <hr className="horizontal-line" />
                             <h3>Account Info</h3>
                             <h4 className="user-info">Welcome {currentUser.user_name}!</h4>

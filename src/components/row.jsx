@@ -51,10 +51,7 @@ const Row = (props) => {
             {toggleActive &&
                 <div className="info-box-container" onClick={toggleInfo}>
                     <div className="info-box">
-                        <div key={props.data.index + props.data.expenseName} className="expense-info-container">
-                            <p key={props.data.index + props.data.expenseName + props.data.index} className='info-name'>Expense: </p >
-                            <p key={props.data.expenseValue + props.data.index} className='info-value'>{props.data.expenseName}</p>
-                        </div>
+                        <label className='expense-name-info-label'>{props.data.expenseName}</label>
                         <div key={props.data.index + props.data.expenseValue} className="expense-info-container">
                             <p key={props.data.index + props.data.expenseValue + props.data.index} className='info-name'>Monthly Payment: </p >
                             <p key={props.data.expenseValue + props.data.index} className='info-value'>${props.data.expenseValue}</p>
@@ -67,7 +64,7 @@ const Row = (props) => {
                         <>
                             <div key={props.data.index + props.data.term} className="expense-info-container">
                                 <p key={props.data.index + props.data.term + props.data.index} className='info-name'>Term: </p >
-                                <p key={props.data.term + props.data.index} className='info-value'>{props.data.term}</p>
+                                <p key={props.data.term + props.data.index} className='info-value'>{props.data.term} Months</p>
                             </div>
                             <div key={props.data.index + props.data.apr} className="expense-info-container">
                                 <p key={props.data.index + props.data.apr + props.data.index} className='info-name'>Apr: </p >

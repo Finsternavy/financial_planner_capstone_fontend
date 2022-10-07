@@ -1,8 +1,10 @@
+.register{
+    padding-top: 75px;
+}
+
 .register .form{
     display: grid;
-    grid-template-columns: repeat(2, calc(50% - 5px));
-    column-gap: 5px;
-    /* gap: 10px; */
+    grid-template-columns: repeat(2, calc(50% ));
 }
 
 .register .form .input{
@@ -29,4 +31,8 @@
 
 .btn{
     cursor: pointer;
+}
+
+.reg-field{
+    border-radius: 10px;
 }

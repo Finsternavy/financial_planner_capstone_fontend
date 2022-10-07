@@ -3,13 +3,14 @@
     grid-template-columns: repeat(2, calc(50% - 5px));
     gap: 10px;
     align-content: center;
-    margin-top: 50px;
+    padding-top: 75px;
 }
 
 .tile{
     position: relative;
     font-size: 3cqw;
-    padding-block: calc(50% - 30px);
+    padding-block: calc(40% - 30px);
+    /* padding-block: 20px; */
     padding-inline: 20px;
     background-color: var(--background-color);
     color: var(--primary-color);
@@ -18,6 +19,7 @@
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
+    /* max-height: 200px; */
     /* force single word lines to avoid shifting behavior on hover */
     word-spacing: 50000px;
 }
@@ -106,7 +108,6 @@
         grid-template-rows: repeat(4, calc(150px - 10px));
         gap: 20px;
         align-content: center center;
-        margin-top: 50px;
         max-height: 100vh;
     }
     .home .container .budget-btn{

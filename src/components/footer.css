@@ -1,0 +1,13 @@
+.footer{
+    position: sticky;
+    /* margin-top: 100px; */
+    top: calc(100vh - 52px);
+    padding: 10px;
+    background-color: var(--nav-light);
+    color: var(--primary-color);
+    font-size: 11px;
+}
+
+.footer-copyright{
+    color: var(--secondary-color);
+}

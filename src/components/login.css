@@ -1,5 +1,29 @@
+.login{
+    padding-top: 75px;
+}
+
 .error{
     background-color: var(--expense-primary-color);
+}
+
+.user-name,
+.user-password,
+.user-email,
+.recover-username .input{
+    border-radius: 10px;
+}
+
+.recover-username,
+.recover-password,
+.recover-success,
+.recover-password-success,
+.recover-password-reset,
+.recovery-password-reset-success{
+    padding-top: 75px;
+}
+
+.logo{
+    max-width: 300px;
 }
 
 @media only screen and (min-width: 768px) {

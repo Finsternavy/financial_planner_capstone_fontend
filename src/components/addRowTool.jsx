@@ -227,10 +227,10 @@ const AddRowTool = (props) => {
                 <>
                     <button className="toggle-show-btn income-show-btn" onClick={toggle}>Open Add Income Tool</button>
                     <div className="income-input-container">
-                        <div className="instruction">Fields with a red border are required</div>
-                        <input name="source" type="text" className="source input required" onChange={onChangeIncome} placeholder="Income Source"/>
-                        <input name="value" type="number" className="value input required number" onChange={onChangeIncome} step={'0.01'} placeholder="$0.00"/>
-                        <select name="frequency" onChange={onChangeIncome} className="frequency input dropdown required">
+                        <div className="instruction">Input Income Information</div>
+                        <input name="source" type="text" className="source input" onChange={onChangeIncome} placeholder="Income Source"/>
+                        <input name="value" type="number" className="value input number" onChange={onChangeIncome} step={'0.01'} placeholder="Amount"/>
+                        <select name="frequency" onChange={onChangeIncome} className="frequency input dropdown">
                             <option value="default">Frequency</option>
                             <option className="option" value="hr">hr</option>
                             <option className="option" value="weekly">weekly</option>
@@ -242,16 +242,17 @@ const AddRowTool = (props) => {
                         {incomeRow.frequency === 'hr' &&
                         <div className="pop-out">
                             <div className="label hours-label">Hours a week:</div>
-                            <input name="hours" type='number' onChange={onChangeIncome} className='input required' step={'1'} placeholder="Hours"/>
+                            <input name="hours" type='number' onChange={onChangeIncome} className='input' step={'1'} placeholder="Hours"/>
                         </div>
                         }
+                        <div className="instruction">Input Monthly Tax Values</div>
                         <div className="label tax-label">Income Tax</div>
                         <input name="fed_income_tax" type="number" className="fed-tax input number" onChange={onChangeIncome} step={'0.01'} placeholder='Federal'/>
                         <input name="state_income_tax" type="number" className="state-tax input number" onChange={onChangeIncome} step={'0.01'} placeholder='State'/>
                         <div className="fica-label">FICA</div>
                         <input name="social_security" type="number" className="fica-ss input number" onChange={onChangeIncome} step={'0.01'} placeholder='Social Security'/>
                         <input name="medicare" type="number" className="fica-medicare input number" onChange={onChangeIncome} step={'0.01'} placeholder='Medicare'/>
-                        <button className="add-row-btn" onClick={addIncomeRow}>Add Row</button>
+                        <button className="add-row-btn" onClick={addIncomeRow}>Add To Budget</button>
                     </div>
                 </>
                 }
@@ -259,10 +260,10 @@ const AddRowTool = (props) => {
                 <>
                 <button className="toggle-show-btn expense-show-btn" onClick={toggle}>Open Add Expense Tool</button>
                     <div className="expense-input-container">
-                        <div className="instruction">Fields with a red border are required</div>
+                        <div className="instruction">Input Expense Information</div>
                         <div className="basic-expense-info">
-                            <input name="expenseName" type="text" className="expenseName input required" onChange={onChangeExpense} placeholder="Expense Name"/>
-                            <select name="expensePriority" onChange={onChangeExpense} className="expensePriority input required">
+                            <input name="expenseName" type="text" className="expenseName input" onChange={onChangeExpense} placeholder="Expense Name"/>
+                            <select name="expensePriority" onChange={onChangeExpense} className="expensePriority input">
                                 <option className="option" value="1">1 - high</option>
                                 <option className="option" value="2">2 - medium</option>
                                 <option className="option" value="3">3 - low</option>
@@ -273,37 +274,37 @@ const AddRowTool = (props) => {
                         {expenseRow.expensePriority != '5' &&
                             <>
                                 <div className="label">Monthly Expense Amount</div>
-                                <input name="expenseValue" type="number" className="value input required" onChange={onChangeExpenseNumber} step={'0.01'} placeholder="$0.00"/>
+                                <input name="expenseValue" type="number" className="value input" onChange={onChangeExpenseNumber} step={'0.01'} placeholder="$0.00"/>
                             </>
                         }
                         {expenseRow.expensePriority == '5' &&
                         <> 
                             <div className="label">Loan Amount</div>
-                            <input name="loan_amount" type="number" className="value input required" onChange={onChangeExpenseNumber} step={'0.01'} placeholder="$0.00"/>
+                            <input name="loan_amount" type="number" className="value input" onChange={onChangeExpenseNumber} step={'0.01'} placeholder="$0.00"/>
                             <div className="mortgage-selection-label label">Is this a mortgage?</div>
-                             <select name="is_mortgage" className="loan-type input required" onChange={onChangeExpense}>
+                             <select name="is_mortgage" className="loan-type input" onChange={onChangeExpense}>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
                             </select>
                             <div className="label">Annual Percentage Rate</div>
-                            <input name="apr" type='number' onChange={onChangeExpenseNumber} className='input required' step={'0.01'} placeholder="APR %"/>
+                            <input name="apr" type='number' onChange={onChangeExpenseNumber} className='input' step={'0.01'} placeholder="APR %"/>
                             <div className="label">Length Of Loan ( Months )</div>
-                            <input name="term" type="number" onChange={onChangeExpenseNumber} className='input required' step={'1'} placeholder="# Months"/>
+                            <input name="term" type="number" onChange={onChangeExpenseNumber} className='input' step={'1'} placeholder="# Months"/>
                             <label className="label">First Payment Date</label>
-                            <input name="loan_start_date" type="date" className="input required" onChange={onChangeExpense}/>
+                            <input name="loan_start_date" type="date" className="input" onChange={onChangeExpense}/>
                             {isMortgage == 'yes' &&
                             <>
                                 <div className="mortgage-label label">Monthly Insurance</div>
-                                <input name="insurance" type="number" className="insurance-field input required" placeholder="Amount" step={'0.01'} onChange={onChangeExpenseNumber}/>
+                                <input name="insurance" type="number" className="insurance-field input" placeholder="Amount" step={'0.01'} onChange={onChangeExpenseNumber}/>
                                 <div className="mortgage-label label">Annual Property Tax</div>
-                                <input name="property_tax" type="number" className="tax-field input required" placeholder="Amount" step={'0.01'} onChange={onChangeExpenseNumber}/>
+                                <input name="property_tax" type="number" className="tax-field input" placeholder="Amount" step={'0.01'} onChange={onChangeExpenseNumber}/>
                                 <div className="mortgage-label label">Mortgage Insurance</div>
-                                <input name="mortgage_insurance" type="number" className="mortgage-insurance-field input required" placeholder="Amount" step={'0.01'} onChange={onChangeExpenseNumber}/>
+                                <input name="mortgage_insurance" type="number" className="mortgage-insurance-field input" placeholder="Amount" step={'0.01'} onChange={onChangeExpenseNumber}/>
                             </>
                             }
                         </>
                         }
-                    <button className="add-row-btn" onClick={addExpenseRow}>Add Row</button>
+                    <button className="add-row-btn" onClick={addExpenseRow}>Add To Budget</button>
                     </div>
                 </>
                 }

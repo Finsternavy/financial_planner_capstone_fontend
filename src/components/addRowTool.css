@@ -15,7 +15,7 @@
 
 .income-input-container.open{
     opacity: 1;
-    max-height: 260px;
+    max-height: 320px;
     pointer-events: auto;
     margin-bottom: 10px;
 }

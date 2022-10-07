@@ -1,3 +1,7 @@
+.view-budget{
+    padding-block: 100px;
+}
+
 .confirm-background{
     position: absolute;
     z-index: 100;

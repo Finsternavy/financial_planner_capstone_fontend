@@ -74,9 +74,9 @@ const Register = () => {
                         <option value="@hotmail.com">@hotmail.com</option>
                         <option value="@protonmail.com">@protonmail.com</option>
                     </select>
-                    <input type="text" name="user_name" className="error-field input" onChange={onChange} placeholder='Create a User Name' />
-                    <input type="password" name="user_password" className="error-field input" onChange={onChange} placeholder='Enter a Password' />
-                    <input type="password" name="user_re_password" className="error-field input" onChange={onChange} placeholder='Re Enter Password' />
+                    <input type="text" name="user_name" className="error-field input reg-field" onChange={onChange} placeholder='Create a User Name' />
+                    <input type="password" name="user_password" className="error-field input reg-field" onChange={onChange} placeholder='Enter a Password' />
+                    <input type="password" name="user_re_password" className="error-field input reg-field" onChange={onChange} placeholder='Re Enter Password' />
                 </div>
                 <div className="btn-container">
                     <button className="btn" onTouchStart={saveUser} onClick={saveUser}>Register</button>
