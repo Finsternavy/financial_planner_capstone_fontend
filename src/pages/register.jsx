@@ -79,7 +79,7 @@ const Register = () => {
                     <input type="password" name="user_re_password" className="error-field input" onChange={onChange} placeholder='Re Enter Password' />
                 </div>
                 <div className="btn-container">
-                    <button className="btn" onClick={saveUser}>Register</button>
+                    <button className="btn" onTouchStart={saveUser} onClick={saveUser}>Register</button>
                     <button className="btn" onClick={cancel}>Cancel</button>
                 </div>
             </div>
