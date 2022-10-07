@@ -144,3 +144,7 @@
 .user-info{
     color: var(--income-primary-color);
 }
+
+.toggle-button{
+    width: 100px;
+}

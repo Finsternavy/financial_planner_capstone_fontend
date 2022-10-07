@@ -1,3 +1,11 @@
+.budget-optimizer{
+    font-size: 11px;
+}
+
+.budget-optimizer .input{
+    border-radius: 10px;
+}
+
 .headers{
     display: flex;
     flex-direction: row;
@@ -88,7 +96,9 @@
 .expense-container > * {
     flex: 1;
     height: 40px;
-    padding-top: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .budget-optimizer .budget-data{
@@ -113,7 +123,9 @@
 
 .new-surplus-container > * {
     height: 40px;
-    padding-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .new-surplus-label{
@@ -122,4 +134,10 @@
 
 .new-surplus{
     background-color: var(--income-primary-color);
+}
+
+@media (min-width: 768px){
+    .budget-optimizer{
+        font-size: 1rem;
+    }
 }

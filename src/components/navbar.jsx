@@ -123,7 +123,7 @@ const Navbar = () => {
                     <div className="hamburger" data-dropdown-button></div>
                 </div>
                 <div className="pop-out-link">
-                    <Toggle/>
+                    <Toggle className="toggle-button"/>
                     {/* This section will contain javascript to check if user is logged in and display different buttons depending on if user logged in or not */}
                     {!activeUser  &&
                         <>

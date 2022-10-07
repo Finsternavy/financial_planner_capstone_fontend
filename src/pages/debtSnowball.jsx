@@ -91,7 +91,7 @@ const DebtSnowball = () => {
             }
             <div className="input-container">
                 <label className="snowball-amount-label label">Additional Payment</label>
-                <input name="snowball" className="snowball" type="number" step={'0.01'} placeholder="Amount" onChange={onChange}/>
+                <input name="snowball" className="snowball-amount" type="number" step={'0.01'} placeholder="Amount" onChange={onChange}/>
             </div>
             <div className="btn-container">
                 <button className="snowball-btn btn" onClick={applySnowball}>Apply Snowball</button>
