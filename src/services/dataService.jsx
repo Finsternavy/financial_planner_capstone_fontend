@@ -17,7 +17,7 @@ class DataService{
         console.log("Attempting to get user")
         let newdata = {}
 
-        let response = await axios.post(apiURL + "user/" + cradentials['user_name'], cradentials).then(res =>{
+        await axios.post(apiURL + "user/" + cradentials['user_name'], cradentials).then(res =>{
             console.log(res.data)
             newdata = res.data
         })

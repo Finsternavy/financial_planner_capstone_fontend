@@ -1,51 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../components/row.css'
 
 
 const Row = (props) => {
 
-    const [data, setData] = useState([])
     const [toggleActive, setToggleActive] = useState(false)
-
-    const loadData = () => {
-        let copy = []
-        let keys = Object.keys(props.data)
-        let values = Object.values(props.data)
-
-        keys.forEach((element, index)=> {
-            let obj = {}
-            if (element !== 'index' && element !== 'last_update_date'){
-                if(element === 'apr'){
-                    obj['Annual Percentage Rate'] = values[index] + '%'
-                }if(element === 'expenseName'){
-                    obj['Expense Name'] = values[index]
-                }if(element === 'expensePriority'){
-                    obj['Priority'] = values[index]
-                }if(element === 'pay_off_date'){
-                    let temp = new Date(values[index])
-                    let date = temp.getDay()+ "/" + temp.getMonth() + "/" + temp.getFullYear()
-                    obj['Payoff Date'] = date
-                }if(element === 'pay_off_value'){
-                    obj['Payoff Value'] = '$' + values[index]
-                }if(element === 'start_date'){
-                    let temp = new Date(values[index])
-                    let date = temp.getDay()+ "/" + temp.getMonth() + "/" + temp.getFullYear()
-                    obj['Loan Start Date'] = date
-                }if(element === 'term'){
-                    obj['Length of Loan'] = values[index] + ' months'
-                }if(element === 'expenseValue'){
-                    obj['Monthly Amount'] = '$' + values[index].toFixed(2)
-                }
-                copy.push(obj)
-            }
-        })
-        
-        setData(copy)
-    }
-
-    useEffect(() => {
-        loadData()
-    }, [])
 
     let id = props.id
 

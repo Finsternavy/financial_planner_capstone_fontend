@@ -2,14 +2,10 @@ import { useEffect, useState, useContext } from "react"
 import DataContext from "../context/dataContext"
 import DataService from "../services/dataService"
 import "../components/debtSnowball.css"
-import { act } from "react-dom/test-utils"
 
 
 const DebtSnowball = () => {
 
-    const [inputData, setInputData] = useState({
-        "debt_index": 0
-    })
     const [userDebts, setUserDebts] = useState([])
     const [snowballedUserDebts, setSnowballedUserDebts] = useState([])
     const [snowball, setSnowball] = useState(0)
@@ -18,32 +14,30 @@ const DebtSnowball = () => {
     let activeBudget = useContext(DataContext).activeBudget
 
     const getUserDebts = async() => {
-        let payload = []
-        console.log(activeBudget)
-        if (activeBudget.expenses){
-            activeBudget.expenses.forEach(expense => {
-                if (expense.expensePriority === '5'){
-                    payload.push(expense)
-                }
-            })
+        if (userDebts.length < 1){
+            let payload = []
+            if (activeBudget.expenses){
+                activeBudget.expenses.forEach(expense => {
+                    if (expense.expensePriority === '5'){
+                        payload.push(expense)
+                    }
+                })
+            }
+            let service = new DataService()
+            let data = await service.updateExpenseData(payload)
+           
+            setUserDebts(data)
+            setSnowballedUserDebts(data)
         }
-        let service = new DataService()
-        let data = await service.updateExpenseData(payload)
-       
-        console.log(data)
-        setUserDebts(data)
-        setSnowballedUserDebts(data)
 
     }
 
     useEffect(() => {
-        if (userDebts.length < 1)
         getUserDebts()
+        // eslint-disable-next-line
     }, [])
 
     const setDebtEndPoints = async() => {
-
-        console.log("Snowball value being sent: " + snowball['snowball'])
 
         let copy = [...userDebts]
 
@@ -52,11 +46,8 @@ const DebtSnowball = () => {
         copy.forEach(debt => {
             payload.push(debt)
         })
-        console.log(payload)
         let service = new DataService()
         let data = await service.snowball(payload)
-
-        console.log(data)
 
         setSnowballedUserDebts(data)
 
@@ -64,11 +55,9 @@ const DebtSnowball = () => {
     }
 
     const onChange = (e) => {
-        let name = e.target.name
         let val = e.target.value
         val = parseFloat(val)
         setSnowball(val)
-        console.log("Value is: " + val)
     }
 
     const updateProgressValue = (data) => {
@@ -80,7 +69,6 @@ const DebtSnowball = () => {
             if (newWidth > 100){
                 newWidth = 100
             }
-            console.log(newWidth)
             elements[i].style.width =  newWidth + '%'
         }
     }
