@@ -8,7 +8,7 @@ class DataService{
     async postUser(user){
         console.log("Attempting to post user")
 
-        await axios.post("http://127.0.0.1:5000/register", user).then(res =>{
+        await axios.post(apiURL + "register", user).then(res =>{
             console.log(res.data)
         })
     }
