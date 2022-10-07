@@ -98,3 +98,7 @@
 .debt-info{
     color: var(--primary-color);
 }
+
+.snowball-amount-label{
+    font-size: 11px;
+}
