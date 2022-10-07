@@ -26,3 +26,7 @@
     background-color: var(--primary-color)!important;
     border-radius: 0 10px 10px 0;
 }
+
+.btn{
+    cursor: pointer;
+}
