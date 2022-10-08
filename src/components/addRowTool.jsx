@@ -245,7 +245,7 @@ const AddRowTool = (props) => {
                             <input name="hours" type='number' onChange={onChangeIncome} className='input' step={'1'} placeholder="Hours"/>
                         </div>
                         }
-                        <div className="instruction">Input Monthly Tax Values</div>
+                        <div className="instruction">Input Monthly Tax Values (Optional)</div>
                         <div className="label tax-label">Income Tax</div>
                         <input name="fed_income_tax" type="number" className="fed-tax input number" onChange={onChangeIncome} step={'0.01'} placeholder='Federal'/>
                         <input name="state_income_tax" type="number" className="state-tax input number" onChange={onChangeIncome} step={'0.01'} placeholder='State'/>
