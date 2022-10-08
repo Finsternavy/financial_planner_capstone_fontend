@@ -117,3 +117,14 @@ This site was developed as a capstone project for SDGKU Full Stack Web Developme
   - Surplus Goal (Not functional)
   
 
+# Cloaning this repo
+
+I do not recommend cloaning this repo and expecting it to function.  This site requires use of a backend that utilizes secret environmental variables not available publically.  Instead, if you would like to see the program in action, the site is live here: https://gilded-semolina-65e579.netlify.app/
+
+If you want to attempt to recreate the site, you will need to also cloan the backend found here: https://github.com/Finsternavy/thewebatease_backend
+
+The above repo contains instructions on setting up a local virtual environment. 
+
+Additionally you will need to setup your own MongoDB and adjust the endpoints in the server.py file as well as the axios data service calls found in the dataServices file of this project. 
+
+### This will require installing axios within the root directory of the cloaned project. 
