@@ -138,7 +138,7 @@ const AutoCalculator = () => {
     }
 
     return (
-        <div className="auto-calulator">
+        <div className="auto-calculator">
             <div className="container">
             <h1 className="header">Auto Calculator</h1>
             <h3 className="note">Optional fields use national average if no value is provided.</h3>

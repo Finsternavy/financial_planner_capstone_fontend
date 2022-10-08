@@ -67,3 +67,13 @@
 .bottom{
     margin-bottom: 50px;
 }
+
+.mortgage-calculator,
+.auto-calculator{
+    padding-top: 75px;
+}
+
+.mortgage-calculator .input,
+.auto-calculator .input{
+    border-radius: 10px;
+}

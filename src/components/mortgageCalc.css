@@ -1,3 +1,7 @@
+.mortgage-calculator{
+    padding-top: 75px;
+}
+
 .mortgage-calculator h3 {
     color: var(--secondary-color);
     background-color: var(--background-color)!important;

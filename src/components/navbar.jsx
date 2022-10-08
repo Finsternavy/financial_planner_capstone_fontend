@@ -96,6 +96,10 @@ const Navbar = () => {
             toggle_menu(e, currentDropDown)
             let path = "/recovery/reset-password"
             navigate(path)
+        }else if(e.target.matches('.resources-link')){
+            toggle_menu(e, currentDropDown)
+            let path = "/resources"
+            navigate(path)
         }
     }
 
@@ -129,11 +133,13 @@ const Navbar = () => {
                         <>
                             <div onClick={menu_Click} className="dont-disable log-in">Login</div>
                             <div onClick={menu_Click} className="dont-disable reg-btn">Register</div>
+                            <div onClick={menu_Click} className="dont-disable resources-link">Resources</div>
                         </>
                     }
                     {activeUser &&
                         <>
                             <div onClick={menu_Click} className="dont-disable log-out">Logout</div>
+                            <div onClick={menu_Click} className="dont-disable resources-link">Resources</div>
                             <hr className="horizontal-line" />
                             <div onClick={menu_Click} className="dont-disable home-link">Home</div>
                             <div onClick={menu_Click} className="dont-disable budget-home-link">Budget Home</div>
