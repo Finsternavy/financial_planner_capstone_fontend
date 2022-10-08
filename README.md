@@ -68,3 +68,41 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+******************************************************************************************************
+
+# Fully implemented Functionality
+
+- User registration
+
+- User login
+
+- User account recovery (username / password)
+
+- Change password
+
+- Budget Creation
+
+- Budget management (CRUD elements)
+
+- Budget optimization
+
+- Debt Snowball (Estimated)
+
+- Detailed Mortgage Calculator with cost breakdown
+
+- Detailed Auto Finance Calculator with cost breakdown
+
+
+# Partially implemented functionality
+
+- Financial Goals:
+
+  - Debt Goals (Working)
+  
+  - Total Debt Goal (Not functional)
+  
+  - Surplus Goal (Not functional)
+  
+
