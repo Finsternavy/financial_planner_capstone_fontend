@@ -106,7 +106,7 @@ This site was developed as a capstone project for SDGKU Full Stack Web Developme
   - As time goes by, the site will update with payment progress and display useful information such as how much you have paid, the total payoff price of the loan       including interest and specific number of payments applied to the principal balance of the loan. 
 
 
-# Partially implemented functionality
+## Partially implemented functionality
 
 - Financial Goals:
 
@@ -117,7 +117,7 @@ This site was developed as a capstone project for SDGKU Full Stack Web Developme
   - Surplus Goal (Not functional)
   
 
-# Cloaning this repo
+## Cloaning this repo
 
 I do not recommend cloaning this repo and expecting it to function.  This site requires use of a backend that utilizes secret environmental variables not available publically.  Instead, if you would like to see the program in action, the site is live here: https://gilded-semolina-65e579.netlify.app/
 
