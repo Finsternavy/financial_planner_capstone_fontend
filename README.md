@@ -128,3 +128,7 @@ The above repo contains instructions on setting up a local virtual environment.
 Additionally you will need to setup your own MongoDB and adjust the endpoints in the server.py file as well as the axios data service calls found in the dataServices file of this project. 
 
 ### This will require installing axios within the root directory of the cloaned project. 
+
+In Windows commandline, CD into the directory where you cloaned this project and run the following command:
+
+npm install axios
