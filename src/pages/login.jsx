@@ -96,10 +96,9 @@ const Login = () => {
             </form>
 
             <div className="disclaimer-container container">
-                <div className="disclaimer-banner">Notes to users</div>
+                <div className="disclaimer-banner">***NOTES***</div>
                 <p className="disclaimer">1. This site is currently under development. Not all functionality is fully implemented.</p>
-                <p className="disclaimer">2. The server may require up to 30 seconds to spin up if the site has been inactive for more than 15 minutes. Please wait after attempting to login or register.</p>
-                <p className="disclaimer">3. No personal information is stored in the database.</p>
+                <p className="disclaimer">2. No personal information is stored in the database.</p>
             </div>
         </div>
 
