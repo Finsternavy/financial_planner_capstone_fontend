@@ -26,6 +26,29 @@
     max-width: 300px;
 }
 
+.disclaimer-container{
+    border: 3px solid var(--nav-light);
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--primary-color);
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.disclaimer-banner{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--nav-light);
+    padding-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.disclaimer{
+    text-align: left;
+}
+
 @media only screen and (min-width: 768px) {
     
     .btn {
