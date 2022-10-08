@@ -4,7 +4,7 @@
 
 .error{
     /* background-color: var(--expense-primary-color)!important; */
-    box-shadow: inset 0 0 5px 3px var(--expense-primary-color)!important;
+    border: 2px solid var(--expense-primary-color)!important;
 }
 
 .user-name,
