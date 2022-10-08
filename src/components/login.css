@@ -61,6 +61,7 @@
     background-color: var(--background-color);
     border-radius: 50px;
     box-shadow: 0 0 30px var(--income-primary-color);
+    font-size: 1.4rem;
 }
 
 @media only screen and (min-width: 768px) {
