@@ -12,6 +12,7 @@ const Login = () => {
     let currentUser = useContext(DataContext).loginUser
     let toggleActiveUser = useContext(DataContext).toggleActiveUser
     let setBudgets = useContext(DataContext).setUserBudgets
+    const [loading, setLoading] = useState(true)
 
     const onChange = (e) => {
         let name = e.target.name
@@ -22,6 +23,7 @@ const Login = () => {
 
     const login = async(e) => {
         e.preventDefault()
+        setLoading(true)
         let service = new DataService()
         let data
         if (!user.user_name || !user.user_password){
@@ -45,9 +47,6 @@ const Login = () => {
         if (data[0] === true){
             currentUser(data[1])
             toggleActiveUser()
-            // let budgets = await service.getBudgets()
-            // setBudgets(budgets)
-            // setBudgets()
             let path = "/home"
             navigate(path)
         }
@@ -71,6 +70,13 @@ const Login = () => {
     return (
 
         <div className="login">
+            {loading &&
+
+                <div className="loading-container container">
+                    <p className="loading-message">Waking the server up from its nap... Please wait...</p>
+                </div>
+
+            }
             <h1 className="header">Financial Planner</h1>
             <img src={logo} alt="" className="logo" />
             <form className="container">
@@ -83,7 +89,7 @@ const Login = () => {
                     <button className="btn" onClick={register}>Register</button>
                 </div>
                 <div className="recovery">
-                    <button className="btn-recovery" onClick={recoverUsername}>Forgot User Name</button>
+                    <button className="btn-recovery" onClick={recoverUsername}>Forgot Username</button>
                     <button className="btn-recovery" onClick={recoverPassword}>Forgot Password</button>
                 </div>
             </form>

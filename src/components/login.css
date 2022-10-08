@@ -49,6 +49,20 @@
     text-align: left;
 }
 
+.loading-container{
+    position: absolute;
+    padding: 100px;
+    color: var(--primary-color);
+    border: 3px solid var(--nav-light);
+    top: 30vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: var(--background-color);
+    border-radius: 50px;
+    box-shadow: 0 0 30px var(--income-primary-color);
+}
+
 @media only screen and (min-width: 768px) {
     
     .btn {
