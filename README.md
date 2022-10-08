@@ -105,6 +105,7 @@ This site was developed as a capstone project for SDGKU Full Stack Web Developme
 
   - As time goes by, the site will update with payment progress and display useful information such as how much you have paid, the total payoff price of the loan       including interest and specific number of payments applied to the principal balance of the loan. 
 
+- Financial Resources Links
 
 ## Partially implemented functionality
 
