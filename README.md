@@ -73,9 +73,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ******************************************************************************************************
 # Financial Planner Website
 
-This site was build to assist anyone with creating and managing their own budget.  Relevant additional functionality has been implemented to include additional expenses that come with financed expenses such as auto loans and mortgages.  These include expenses such as insurance, mortgage insurance, and property taxes.  The site also includes mortgage and auto loan calculators that will generate and display a complete breakdown of these expenses and how they effect your monthly payment.
+This site was built to assist anyone with creating and managing their own budget.  Relevant additional functionality has been implemented to include additional expenses that come with financed expenses such as auto loans and mortgages.  These include expenses such as insurance, mortgage insurance, and property taxes.  The site also includes mortgage and auto loan calculators that will generate and display a complete breakdown of these expenses and how they affect your monthly payment.
 
-This site was developed as a capstone project for SDGKU Full Stack Web Development Immursive program (Highly recommend).  I plan to continue development after the course as I plan to use this tool for managing my own finances. 
+This site was developed as a capstone project for SDGKU Full Stack Web Development Immersive program (Highly recommend).  I plan to continue development after the course as I plan to use this tool for managing my own finances. 
 
 ## Fully implemented Functionality
 
@@ -101,7 +101,7 @@ This site was developed as a capstone project for SDGKU Full Stack Web Developme
 
 - Financed expense tracking.
 
-  - As time goes by, the site will update with payment progress and display useful information such as how much you have paid, the total payoff price of the loan       including interest and specific amount of payments applied to the principle balance of the loan. 
+  - As time goes by, the site will update with payment progress and display useful information such as how much you have paid, the total payoff price of the loan       including interest and specific number of payments applied to the principal balance of the loan. 
 
 
 # Partially implemented functionality
