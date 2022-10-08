@@ -79,8 +79,8 @@ const Register = () => {
                     <input type="password" name="user_re_password" className="error-field input reg-field" onChange={onChange} placeholder='Re Enter Password' />
                 </div>
                 <div className="registration-instructions-container">
-                    <div className="password-requirements-label">Password must be at least 6 characters</div>
-                    <div className="email-warning-label">You must enter a valid email or your account information will not be recoverable</div>
+                    <div className="password-requirements-label">Password must be at least 6 characters.</div>
+                    <div className="email-warning-label">You must enter a valid email or your account information will not be recoverable.</div>
                 </div>
                 <div className="warning">NOTE: It may take several seconds for the server to respond. Please be patient.</div>
                 <div className="btn-container">
