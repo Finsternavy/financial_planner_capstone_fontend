@@ -20,8 +20,6 @@ const Register = () => {
     }
 
     const saveUser = async() => {
-        setLoading(true)
-        
         // need to add validation to ensure user enters a valid email address
 
         if (!user.user_password || !user.user_re_password || !user.user_email || !user.user_name){
@@ -34,9 +32,9 @@ const Register = () => {
         }
 
         if (user.user_password.length < 6){
-            setLoading(false)
             fieldsError()
         }else{
+            setLoading(true)
             let copy = {...user}
             copy['user_re_password'] = ""
             let updatedEmail = user['user_email'] + user['email_provider']
