@@ -12,7 +12,7 @@ const Login = () => {
     let currentUser = useContext(DataContext).loginUser
     let toggleActiveUser = useContext(DataContext).toggleActiveUser
     let setBudgets = useContext(DataContext).setUserBudgets
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
     const onChange = (e) => {
         let name = e.target.name
