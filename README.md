@@ -1,5 +1,8 @@
 # This site is currently live at https://financial-planner-capstone.netlify.app/
 
+## Frontend github: https://github.com/Finsternavy/financial_planner_capstone_frontend
+## Backend github: https://github.com/Finsternavy/thewebatease_backend
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
