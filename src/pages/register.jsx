@@ -33,19 +33,25 @@ const Register = () => {
             return
         }
 
-        let copy = {...user}
-        copy['user_re_password'] = ""
-        let updatedEmail = user['user_email'] + user['email_provider']
+        if (user.user_password.length < 6){
+            setLoading(false)
+            fieldsError()
+        }else{
+            let copy = {...user}
+            copy['user_re_password'] = ""
+            let updatedEmail = user['user_email'] + user['email_provider']
+    
+            copy['user_email'] = updatedEmail
+            console.log(updatedEmail)
+            console.log(copy)
+    
+            let service = new DataService()
+            await service.postUser(copy)
+    
+            let path = ('/')
+            navigate(path)
+        }
 
-        copy['user_email'] = updatedEmail
-        console.log(updatedEmail)
-        console.log(copy)
-
-        let service = new DataService()
-        await service.postUser(copy)
-
-        let path = ('/')
-        navigate(path)
     }
 
     const cancel = () => {

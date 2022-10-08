@@ -39,6 +39,7 @@ const Login = () => {
         }
 
         if (data[0] === false){
+            setLoading(false)
             let userName = document.querySelector('.user-name')
             userName.classList.add("error")
             let userPassword = document.querySelector('.user-password')
