@@ -1,4 +1,4 @@
-# This site is currently live at https://gilded-semolina-65e579.netlify.app/
+# This site is currently live at https://financial-planner-capstone.netlify.app/
 
 # Getting Started with Create React App
 
@@ -120,7 +120,7 @@ This site was developed as a capstone project for SDGKU Full Stack Web Developme
 
 ## Cloaning this repo
 
-I do not recommend cloaning this repo and expecting it to function.  This site requires use of a backend that utilizes secret environmental variables not available publically.  Instead, if you would like to see the program in action, the site is live here: https://gilded-semolina-65e579.netlify.app/
+I do not recommend cloaning this repo and expecting it to function.  This site requires use of a backend that utilizes secret environmental variables not available publically.  Instead, if you would like to see the program in action, the site is live here: https://financial-planner-capstone.netlify.app/
 
 If you want to attempt to recreate the site, you will need to also cloan the backend found here: https://github.com/Finsternavy/thewebatease_backend
 
