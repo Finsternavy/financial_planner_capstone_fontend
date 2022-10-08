@@ -8,6 +8,7 @@ const Register = () => {
     const [user,setUser] = useState({
         "email_provider": "@gmail.com"
     })
+    const [loading, setLoading] = useState(false)
 
     let  navigate = useNavigate()
 
@@ -19,6 +20,7 @@ const Register = () => {
     }
 
     const saveUser = async() => {
+        setLoading(true)
         
         // need to add validation to ensure user enters a valid email address
 
@@ -61,6 +63,11 @@ const Register = () => {
 
     return (
         <div className="register">
+            {loading &&
+                <div className="loading-container container">
+                    <p className="loading-message">Waking the server up from its nap... Please wait...</p>
+                </div>
+            }
             <h1 className="header">Register</h1>
             <div className="container">
                 <div className="form">

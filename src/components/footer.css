@@ -1,7 +1,7 @@
 .footer{
     position: sticky;
     /* margin-top: 100px; */
-    top: calc(100vh - 52px);
+    top: calc(100vh - 72px);
     padding: 10px;
     background-color: var(--nav-light);
     color: var(--primary-color);
